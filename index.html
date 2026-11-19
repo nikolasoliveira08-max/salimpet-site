@@ -1,0 +1,651 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Salim Pet | Clínica Veterinária e Banho e Tosa no Jardim Maria Estela</title>
+<meta name="description" id="metaDesc" content="Clínica veterinária e estética animal no Jardim Maria Estela, São Paulo. Consultas com a Dra. Giovanna Salim, vacinas, exames, cirurgias, castração, banho e tosa. Agende pelo WhatsApp.">
+<meta property="og:title" content="Salim Pet | Clínica Veterinária e Banho e Tosa">
+<meta property="og:description" content="Consultas, vacinas, exames, cirurgias, banho e tosa. Nota 4,8 no Google. Agende pelo WhatsApp.">
+<meta property="og:image" content="img/bob.jpg">
+<link rel="icon" href="img/perfil.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --teal:#1f9c9e;
+  --teal-600:#178385;
+  --teal-50:#e6f5f4;
+  --ink:#0e3436;
+  --ink-2:#3d5c5d;
+  --cream:#fbf6ee;
+  --paper:#ffffff;
+  --amber:#f4a63a;
+  --amber-50:#fff1dc;
+  --line:#dcebe9;
+  --wa:#1fae5b;
+  --radius:22px;
+  --shadow:0 18px 40px -18px rgba(14,52,54,.35);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+[id]{scroll-margin-top:84px}
+body{margin:0;font-family:Nunito,system-ui,sans-serif;color:var(--ink);background:var(--cream);line-height:1.55;-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}
+a{color:inherit}
+h1,h2,h3{font-family:Fredoka,Nunito,sans-serif;line-height:1.1;margin:0;letter-spacing:-.01em}
+.wrap{max-width:1160px;margin:0 auto;padding:0 20px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;border:0;cursor:pointer;font:800 16px/1 Nunito,sans-serif;padding:16px 24px;border-radius:999px;text-decoration:none;transition:transform .15s, box-shadow .15s, background .15s}
+.btn:hover{transform:translateY(-2px)}
+.btn svg{width:20px;height:20px;flex:none}
+.btn-wa{background:var(--wa);color:#fff;box-shadow:0 10px 24px -10px rgba(31,174,91,.7)}
+.btn-wa:hover{background:#18984e}
+.btn-teal{background:var(--teal);color:#fff;box-shadow:0 10px 24px -10px rgba(31,156,158,.8)}
+.btn-teal:hover{background:var(--teal-600)}
+.btn-ghost{background:#fff;color:var(--ink);border:2px solid var(--line)}
+.eyebrow{display:inline-block;font:800 13px/1 Nunito,sans-serif;letter-spacing:.12em;text-transform:uppercase;color:var(--teal-600);margin-bottom:14px}
+
+/* header */
+header{position:sticky;top:0;z-index:40;background:rgba(251,246,238,.9);backdrop-filter:blur(10px);border-bottom:1px solid transparent;transition:border-color .2s}
+header.scrolled{border-color:var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:74px;gap:16px}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none}
+.brand img{width:46px;height:46px;border-radius:14px}
+.brand b{font:700 21px/1 Fredoka,sans-serif;display:block}
+.brand small{font-size:12.5px;color:var(--ink-2);font-weight:700}
+.nav ul{display:flex;gap:26px;list-style:none;margin:0;padding:0}
+.nav ul a{text-decoration:none;font-weight:700;font-size:15px;color:var(--ink-2)}
+.nav ul a:hover{color:var(--teal-600)}
+.nav .btn{padding:12px 18px;font-size:15px}
+@media (max-width:900px){.nav ul{display:none}}
+@media (max-width:480px){.nav .btn span{display:none}.nav .btn{padding:12px}}
+
+/* hero */
+.hero{padding:56px 0 80px;position:relative;overflow:hidden}
+.hero::before{content:"";position:absolute;right:-180px;top:-140px;width:620px;height:620px;border-radius:50%;background:radial-gradient(circle at 40% 40%, #bfe6e3 0%, rgba(191,230,227,0) 70%);z-index:-1}
+.hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:48px;align-items:center}
+.rating{display:inline-flex;align-items:center;gap:10px;background:#fff;border:1px solid var(--line);padding:8px 14px 8px 10px;border-radius:999px;font-weight:700;font-size:14px;margin-bottom:22px;text-decoration:none}
+.stars{color:var(--amber);letter-spacing:1px;font-size:15px}
+.hero h1{font-size:clamp(40px,5.6vw,66px);font-weight:700}
+.hero h1 em{font-style:normal;color:var(--teal)}
+.hero p.lead{font-size:19px;color:var(--ink-2);max-width:520px;margin:20px 0 30px}
+.hero-ctas{display:flex;flex-wrap:wrap;gap:12px}
+.hero-facts{display:flex;flex-wrap:wrap;gap:22px;margin-top:34px;font-size:14.5px;font-weight:700;color:var(--ink-2)}
+.hero-facts span{display:flex;align-items:center;gap:8px}
+.hero-facts svg{width:18px;height:18px;color:var(--teal)}
+.collage{position:relative;height:540px}
+.collage figure{position:absolute;margin:0;border-radius:26px;overflow:hidden;box-shadow:var(--shadow);border:6px solid #fff;background:#fff}
+.collage img{width:100%;height:100%;object-fit:cover}
+.collage .c1{width:58%;height:78%;left:0;top:4%;transform:rotate(-4deg)}
+.collage .c2{width:50%;height:62%;right:0;bottom:0;transform:rotate(5deg)}
+.collage .tag{position:absolute;background:#fff;border-radius:16px;padding:12px 16px;box-shadow:var(--shadow);font-weight:800;font-size:14px;display:flex;gap:10px;align-items:center;z-index:2}
+.collage .tag i{font-style:normal;font-size:22px}
+.collage .t1{right:4%;top:6%}
+.collage .t2{left:6%;bottom:4%}
+@media (max-width:900px){
+  .hero{padding:32px 0 56px}
+  .hero-grid{grid-template-columns:1fr;gap:40px}
+  .collage{height:420px;max-width:460px;margin:0 auto;width:100%}
+}
+@media (max-width:480px){.collage{height:360px}.hero-ctas .btn{width:100%}}
+
+/* paths */
+.paths{padding:20px 0 90px}
+.paths-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+.path{border-radius:var(--radius);padding:36px;position:relative;overflow:hidden;display:flex;flex-direction:column}
+.path.vet{background:var(--ink);color:#fff}
+.path.spa{background:#fff;border:1px solid var(--line)}
+.path h2{font-size:32px;margin:6px 0 10px}
+.path p{margin:0 0 22px;opacity:.85}
+.path .eyebrow{margin:0}
+.path.vet .eyebrow{color:#86d6d3}
+.path ul{list-style:none;padding:0;margin:0 0 28px;display:grid;grid-template-columns:1fr 1fr;gap:10px 16px}
+.path li{display:flex;gap:10px;align-items:flex-start;font-weight:700;font-size:15.5px}
+.path li::before{content:"";flex:none;width:20px;height:20px;margin-top:2px;border-radius:50%;background:var(--teal) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='3.2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M5 12.5l4.5 4.5L19 7.5'/%3E%3C/svg%3E") center/12px no-repeat}
+.path.spa li::before{background-color:var(--amber)}
+.path .btn{margin-top:auto;align-self:flex-start}
+.path .paw{position:absolute;right:-30px;top:-30px;width:170px;opacity:.07}
+@media (max-width:900px){.paths-grid{grid-template-columns:1fr}.path{padding:28px 22px}}
+@media (max-width:420px){.path ul{grid-template-columns:1fr}}
+
+/* section heads */
+.sec{padding:90px 0}
+.sec-head{max-width:640px;margin-bottom:44px}
+.sec-head h2{font-size:clamp(32px,4vw,46px)}
+.sec-head p{color:var(--ink-2);font-size:18px;margin:14px 0 0}
+.center{text-align:center;margin-left:auto;margin-right:auto}
+
+/* doctor */
+.doc{background:var(--teal-50)}
+.doc-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:56px;align-items:center}
+.doc-photo{border-radius:28px;overflow:hidden;box-shadow:var(--shadow);aspect-ratio:4/5;border:6px solid #fff}
+.doc-photo img{width:100%;height:100%;object-fit:cover;object-position:center 30%}
+.doc h2{font-size:clamp(32px,4vw,44px)}
+.doc p{font-size:18px;color:var(--ink-2)}
+.pillars{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin:30px 0}
+.pillar{background:#fff;border-radius:18px;padding:18px}
+.pillar b{display:block;font:700 18px/1.2 Fredoka,sans-serif;margin-bottom:4px}
+.pillar span{font-size:14px;color:var(--ink-2)}
+@media (max-width:900px){.doc-grid{grid-template-columns:1fr;gap:32px}.doc-photo{max-width:380px}.pillars{grid-template-columns:1fr}}
+
+/* gallery */
+.gallery{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.gallery figure{margin:0;border-radius:20px;overflow:hidden;position:relative;aspect-ratio:3/4;background:#ddd}
+.gallery img{width:100%;height:100%;object-fit:cover;transition:transform .5s}
+.gallery figure:hover img{transform:scale(1.05)}
+.gallery figcaption{position:absolute;left:12px;bottom:12px;background:rgba(255,255,255,.92);border-radius:999px;padding:6px 12px;font-weight:800;font-size:13px}
+@media (max-width:900px){.gallery{grid-template-columns:repeat(2,1fr);gap:12px}}
+.ig-cta{display:flex;justify-content:center;margin-top:32px}
+
+/* steps */
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;counter-reset:s}
+.step{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:28px}
+.step::before{counter-increment:s;content:counter(s);display:grid;place-items:center;width:44px;height:44px;border-radius:14px;background:var(--amber-50);color:#b86c00;font:700 22px/1 Fredoka,sans-serif;margin-bottom:18px}
+.step h3{font-size:21px;margin-bottom:8px}
+.step p{margin:0;color:var(--ink-2)}
+@media (max-width:800px){.steps{grid-template-columns:1fr}}
+
+/* booking */
+.book{background:var(--ink);color:#fff;border-radius:32px;padding:56px;display:grid;grid-template-columns:.85fr 1.15fr;gap:48px}
+.book h2{font-size:clamp(32px,4vw,44px)}
+.book .eyebrow{color:#86d6d3}
+.book-side p{opacity:.85;font-size:17px}
+.book-side ul{list-style:none;padding:0;margin:26px 0 0;display:grid;gap:14px}
+.book-side li{display:flex;gap:12px;align-items:center;font-weight:700}
+.book-side li svg{width:22px;height:22px;color:#86d6d3;flex:none}
+form{background:#fff;color:var(--ink);border-radius:24px;padding:28px}
+.tabs{display:grid;grid-template-columns:1fr 1fr;background:var(--teal-50);border-radius:999px;padding:5px;margin-bottom:22px}
+.tabs button{border:0;background:transparent;font:800 15px/1.15 Nunito,sans-serif;padding:13px 8px;white-space:nowrap;border-radius:999px;cursor:pointer;color:var(--ink-2)}
+.tabs button[aria-selected="true"]{background:#fff;color:var(--ink);box-shadow:0 4px 12px -4px rgba(14,52,54,.25)}
+.row{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.field{display:flex;flex-direction:column;gap:6px;margin-bottom:14px}
+.field label{font-weight:800;font-size:14px}
+.field input,.field select,.field textarea{font:600 16px Nunito,sans-serif;color:var(--ink);border:2px solid var(--line);border-radius:14px;padding:12px 14px;background:#fff;width:100%}
+.field input:focus,.field select:focus,.field textarea:focus{outline:none;border-color:var(--teal)}
+.field textarea{resize:vertical;min-height:72px}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chips label{cursor:pointer;position:relative}
+.chips input{position:absolute;left:0;top:0;width:1px;height:1px;opacity:0;pointer-events:none}
+.chips span{display:inline-block;padding:10px 14px;border-radius:999px;border:2px solid var(--line);font-weight:700;font-size:14.5px}
+.chips input:checked + span{border-color:var(--teal);background:var(--teal-50);color:var(--teal-600)}
+.chips input:focus-visible + span{outline:3px solid var(--amber)}
+.hint{font-size:13px;color:#b0402c;min-height:18px;font-weight:700}
+form .btn{width:100%;margin-top:6px;font-size:17px;padding:18px}
+.form-note{font-size:13px;color:var(--ink-2);text-align:center;margin:12px 0 0}
+[hidden]{display:none!important}
+@media (max-width:900px){.book{grid-template-columns:1fr;padding:32px 20px;border-radius:26px;gap:28px}form{padding:22px 18px}}
+@media (max-width:440px){.row{grid-template-columns:1fr;gap:0}}
+
+/* reviews */
+.reviews{display:grid;grid-template-columns:1.1fr repeat(3,1fr);gap:18px;align-items:stretch}
+.score{background:var(--amber-50);border-radius:var(--radius);padding:28px;display:flex;flex-direction:column;justify-content:center}
+.score b{font:700 64px/1 Fredoka,sans-serif}
+.score .stars{font-size:22px;margin:6px 0}
+.score span{font-weight:700;color:var(--ink-2)}
+.quote{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:26px;display:flex;flex-direction:column;gap:16px}
+.quote p{margin:0;font:600 19px/1.4 Fredoka,sans-serif}
+.quote small{color:var(--ink-2);font-weight:700;margin-top:auto}
+@media (max-width:1000px){.reviews{grid-template-columns:1fr 1fr}}
+@media (max-width:560px){.reviews{grid-template-columns:1fr}}
+
+/* visit */
+.visit-grid{display:grid;grid-template-columns:1fr 1.2fr;gap:24px}
+.info{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:32px}
+.info h3{font-size:24px;margin-bottom:18px}
+.info dl{margin:0;display:grid;gap:18px}
+.info dt{font-weight:800;font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:var(--teal-600)}
+.info dd{margin:4px 0 0;font-weight:700;font-size:17px}
+.hours{display:grid;grid-template-columns:auto 1fr;gap:4px 18px;font-weight:700}
+.hours .off{color:#9a5b4f}
+.today{background:var(--teal-50);border-radius:8px;padding:0 6px;margin:0 -6px}
+.map{border-radius:var(--radius);overflow:hidden;min-height:380px;border:1px solid var(--line);background:#e7eeee}
+.map iframe{width:100%;height:100%;min-height:380px;border:0;display:block}
+@media (max-width:900px){.visit-grid{grid-template-columns:1fr}}
+
+/* faq */
+.faq{max-width:780px;margin:0 auto}
+details{background:#fff;border:1px solid var(--line);border-radius:18px;padding:0 22px;margin-bottom:12px}
+summary{cursor:pointer;list-style:none;padding:20px 0;font:600 19px/1.3 Fredoka,sans-serif;display:flex;justify-content:space-between;gap:16px}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";font-size:26px;line-height:.8;color:var(--teal)}
+details[open] summary::after{content:"–"}
+details p{margin:0 0 20px;color:var(--ink-2)}
+
+/* footer */
+.final{background:var(--teal);color:#fff;text-align:center;padding:72px 20px;border-radius:32px;position:relative;overflow:hidden}
+.final h2{font-size:clamp(30px,4.4vw,48px);max-width:720px;margin:0 auto 14px}
+.final p{opacity:.9;font-size:18px;margin:0 0 28px}
+.final .btn-ghost{border-color:transparent}
+footer{padding:48px 0 110px;color:var(--ink-2);font-size:14.5px}
+.foot{display:flex;flex-wrap:wrap;justify-content:space-between;gap:20px;align-items:center}
+.foot a{font-weight:700}
+
+/* floating wa */
+.fab{position:fixed;right:18px;bottom:18px;z-index:50;width:62px;height:62px;border-radius:50%;background:var(--wa);display:grid;place-items:center;box-shadow:0 12px 28px -8px rgba(0,0,0,.4);transition:transform .15s}
+.fab:hover{transform:scale(1.07)}
+.fab svg{width:32px;height:32px;color:#fff}
+.fab::after{content:"";position:absolute;inset:0;border-radius:50%;border:3px solid var(--wa);animation:ping 2.4s infinite}
+@keyframes ping{0%{transform:scale(1);opacity:.7}80%,100%{transform:scale(1.5);opacity:0}}
+@media (prefers-reduced-motion:reduce){.fab::after{animation:none}*{scroll-behavior:auto}}
+
+.reveal{opacity:0;transform:translateY(18px);transition:opacity .6s ease, transform .6s ease}
+.reveal.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none}}
+.aviso{background:var(--amber);color:var(--ink);text-align:center;font-weight:800;padding:10px 16px;font-size:15px}
+</style>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-wa" viewBox="0 0 24 24"><path fill="currentColor" d="M17.47 14.38c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.64.07-.3-.15-1.26-.46-2.4-1.48-.89-.79-1.49-1.77-1.66-2.07-.17-.3-.02-.46.13-.6.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48s1.07 2.88 1.21 3.08c.15.2 2.1 3.2 5.08 4.49.71.31 1.26.49 1.69.63.71.23 1.36.2 1.87.12.57-.09 1.76-.72 2.01-1.41.25-.7.25-1.29.17-1.41-.07-.13-.27-.2-.57-.35M12.05 21.5h-.01a9.4 9.4 0 0 1-4.8-1.32l-.34-.2-3.57.94.95-3.48-.22-.36a9.43 9.43 0 0 1-1.45-5.03c0-5.2 4.24-9.44 9.45-9.44a9.4 9.4 0 0 1 6.68 2.77 9.38 9.38 0 0 1 2.76 6.68c0 5.21-4.24 9.44-9.45 9.44M20.08 3.9A11.25 11.25 0 0 0 12.05.6C5.8.6.7 5.7.7 11.95c0 2 .52 3.95 1.52 5.67L.6 23.4l5.92-1.55a11.3 11.3 0 0 0 5.42 1.38h.01c6.25 0 11.35-5.1 11.35-11.35 0-3.03-1.18-5.88-3.33-8.02"/></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></symbol>
+  <symbol id="i-clock" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></symbol>
+  <symbol id="i-star" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.3l-5.9 3.3 1.3-6.6L2.5 9.4l6.6-.8z"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8 12.5l2.7 2.7L16.5 9"/></symbol>
+  <symbol id="i-ig" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></symbol>
+  <symbol id="i-paw" viewBox="0 0 64 64"><g fill="currentColor"><ellipse cx="20" cy="18" rx="7" ry="9"/><ellipse cx="44" cy="18" rx="7" ry="9"/><ellipse cx="9" cy="34" rx="6" ry="8"/><ellipse cx="55" cy="34" rx="6" ry="8"/><path d="M32 30c-9 0-18 12-18 20 0 6 5 8 9 8 4 0 6-2 9-2s5 2 9 2 9-2 9-8c0-8-9-20-18-20z"/></g></symbol>
+</svg>
+
+<div class="aviso" id="aviso" hidden></div>
+
+<header id="top">
+  <div class="wrap nav">
+    <a class="brand" href="#top" aria-label="Salim Pet, início">
+      <img src="img/perfil.jpg" alt="Logo Salim Pet" width="46" height="46">
+      <span><b>Salim Pet</b><small>Clínica Veterinária e Estética Animal</small></span>
+    </a>
+    <ul>
+      <li><a href="#servicos">Serviços</a></li>
+      <li><a href="#veterinaria">A veterinária</a></li>
+      <li><a href="#agendar">Agendar</a></li>
+      <li><a href="#avaliacoes">Avaliações</a></li>
+      <li><a href="#visite">Como chegar</a></li>
+    </ul>
+    <a class="btn btn-wa" href="#agendar" data-wa="Olá! Vim pelo site e gostaria de agendar um horário.">
+      <svg><use href="#i-wa"/></svg><span>Agendar</span>
+    </a>
+  </div>
+</header>
+
+<main>
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div class="reveal">
+      <a class="rating" href="#avaliacoes">
+        <span class="stars">★★★★★</span> <span><b data-k="google.nota"></b> no Google · <span data-k="google.avaliacoes"></span> avaliações</span>
+      </a>
+      <h1><span data-k="topo.titulo"></span> <em data-k="topo.titulo_destaque"></em></h1>
+      <p class="lead" data-k="topo.texto"></p>
+      <div class="hero-ctas">
+        <a class="btn btn-wa" href="#agendar" data-tab="spa"><svg><use href="#i-wa"/></svg>Agendar banho e tosa</a>
+        <a class="btn btn-teal" href="#agendar" data-tab="vet">Marcar consulta</a>
+      </div>
+      <div class="hero-facts">
+        <span><svg><use href="#i-clock"/></svg><span data-k="horario_resumo"></span></span>
+        <span><svg><use href="#i-pin"/></svg><span data-k="contato.rua"></span></span>
+      </div>
+    </div>
+    <div class="collage reveal" aria-hidden="true">
+      <figure class="c1"><img data-src="topo.foto_1" alt=""></figure>
+      <figure class="c2"><img data-src="topo.foto_2" alt=""></figure>
+      <div class="tag t1" data-k="topo.selo_1"></div>
+      <div class="tag t2" data-k="topo.selo_2"></div>
+    </div>
+  </div>
+</section>
+
+<section class="paths" id="servicos">
+  <div class="wrap paths-grid">
+    <article class="path vet reveal">
+      <svg class="paw" style="color:#fff"><use href="#i-paw"/></svg>
+      <span class="eyebrow">Clínica veterinária</span>
+      <h2 data-k="clinica.titulo"></h2>
+      <p data-k="clinica.texto"></p>
+      <ul id="listaClinica"></ul>
+      <a class="btn btn-teal" href="#agendar" data-tab="vet">Agendar consulta</a>
+    </article>
+    <article class="path spa reveal">
+      <svg class="paw" style="color:var(--teal)"><use href="#i-paw"/></svg>
+      <span class="eyebrow" style="color:#b86c00">Estética animal</span>
+      <h2 data-k="estetica.titulo"></h2>
+      <p data-k="estetica.texto"></p>
+      <ul id="listaEstetica"></ul>
+      <a class="btn btn-wa" href="#agendar" data-tab="spa"><svg><use href="#i-wa"/></svg>Agendar banho e tosa</a>
+    </article>
+  </div>
+</section>
+
+<section class="sec doc" id="veterinaria">
+  <div class="wrap doc-grid">
+    <div class="doc-photo reveal"><img data-src="veterinaria.foto" alt="Veterinária da Salim Pet no consultório" loading="lazy"></div>
+    <div class="reveal">
+      <span class="eyebrow">Quem cuida do seu pet</span>
+      <h2 data-k="veterinaria.nome"></h2>
+      <p data-k="veterinaria.texto"></p>
+      <div class="pillars" id="destaques"></div>
+      <a class="btn btn-teal" href="#agendar" data-tab="vet">Agendar consulta</a>
+    </div>
+  </div>
+</section>
+
+<section class="sec">
+  <div class="wrap">
+    <div class="sec-head center reveal" style="text-align:center">
+      <span class="eyebrow">Clientes de quatro patas</span>
+      <h2>Quem já passou por aqui</h2>
+      <p>Cada banho termina com foto. Olha só a turma.</p>
+    </div>
+    <div class="gallery" id="galeria"></div>
+    <div class="ig-cta"><a class="btn btn-ghost" id="igLink" target="_blank" rel="noopener"><svg><use href="#i-ig"/></svg>Ver mais no <span id="igUser"></span></a></div>
+  </div>
+</section>
+
+<section class="sec" style="padding-top:20px">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">Simples assim</span>
+      <h2>Agendar leva 1 minuto</h2>
+    </div>
+    <div class="steps">
+      <div class="step reveal"><h3>Escolha o serviço</h3><p>Banho e tosa ou atendimento veterinário, e o melhor dia pra você.</p></div>
+      <div class="step reveal"><h3>Envie pelo WhatsApp</h3><p>O formulário monta a mensagem pronta. É só tocar em enviar.</p></div>
+      <div class="step reveal"><h3>Confirmamos o horário</h3><p>A equipe responde com o horário disponível e pronto, é só vir.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="agendar" style="padding:0 0 90px">
+  <div class="wrap">
+    <div class="book reveal">
+      <div class="book-side">
+        <span class="eyebrow">Agendamento</span>
+        <h2>Reserve o horário do seu pet</h2>
+        <p>As vagas costumam esgotar, principalmente aos sábados. Garanta a sua agora.</p>
+        <ul>
+          <li><svg><use href="#i-check"/></svg>Resposta rápida no WhatsApp</li>
+          <li><svg><use href="#i-check"/></svg><span data-k="horario_resumo"></span></li>
+          <li><svg><use href="#i-check"/></svg>Cães e gatos</li>
+          <li><svg><use href="#i-check"/></svg>Nota <span data-k="google.nota"></span> com <span data-k="google.avaliacoes"></span> avaliações</li>
+        </ul>
+      </div>
+
+      <form id="bookForm" novalidate>
+        <div class="tabs" role="tablist" aria-label="Tipo de atendimento">
+          <button type="button" role="tab" id="tab-spa" aria-selected="true" data-kind="spa">🛁 Banho e tosa</button>
+          <button type="button" role="tab" id="tab-vet" aria-selected="false" data-kind="vet">🩺 Veterinário</button>
+        </div>
+
+        <div class="field">
+          <label>Serviço</label>
+          <div class="chips" id="svcSpa"></div>
+          <div class="chips" id="svcVet" hidden></div>
+        </div>
+
+        <div class="row">
+          <div class="field"><label for="tutor">Seu nome</label><input id="tutor" name="tutor" autocomplete="given-name" placeholder="Ex.: Mariana" required></div>
+          <div class="field"><label for="pet">Nome do pet</label><input id="pet" name="pet" placeholder="Ex.: Thor" required></div>
+        </div>
+
+        <div class="row">
+          <div class="field">
+            <label for="especie">Espécie</label>
+            <select id="especie" name="especie"><option>Cachorro</option><option>Gato</option></select>
+          </div>
+          <div class="field" id="porteField">
+            <label for="porte">Porte</label>
+            <select id="porte" name="porte"><option>Pequeno</option><option>Médio</option><option>Grande</option></select>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="field"><label for="data">Dia preferido</label><input type="date" id="data" name="data" required></div>
+          <div class="field">
+            <label for="periodo">Período</label>
+            <select id="periodo" name="periodo"><option>Manhã</option><option>Tarde</option><option>Tanto faz</option></select>
+          </div>
+        </div>
+
+        <div class="field">
+          <label for="obs">Observações <span style="font-weight:600;color:var(--ink-2)">(opcional)</span></label>
+          <textarea id="obs" name="obs" placeholder="Ex.: ele é medroso com secador / está com coceira há 3 dias"></textarea>
+        </div>
+
+        <div class="hint" id="hint" role="alert"></div>
+        <button class="btn btn-wa" type="submit"><svg><use href="#i-wa"/></svg>Enviar pelo WhatsApp</button>
+        <p class="form-note">Abre o WhatsApp com a mensagem pronta para <span data-k="contato.telefone"></span>.</p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="avaliacoes" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">Avaliações no Google</span>
+      <h2>Tutores recomendam</h2>
+    </div>
+    <div class="reviews" id="reviews">
+      <div class="score reveal">
+        <b data-k="google.nota"></b>
+        <div class="stars">★★★★★</div>
+        <span><span data-k="google.avaliacoes"></span> avaliações no Google</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="visite" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">Visite a gente</span>
+      <h2><span data-k="contato.bairro"></span></h2>
+    </div>
+    <div class="visit-grid">
+      <div class="info reveal">
+        <dl>
+          <div><dt>Endereço</dt><dd><span data-k="contato.rua"></span><br><span data-k="contato.bairro"></span>, <span data-k="contato.cidade"></span><br>CEP <span data-k="contato.cep"></span></dd></div>
+          <div><dt>WhatsApp e telefone</dt><dd><a class="tel" data-k="contato.telefone"></a></dd></div>
+          <div><dt>Horário</dt><dd class="hours" id="hours"></dd></div>
+        </dl>
+        <div style="display:flex;flex-wrap:wrap;gap:10px;margin-top:26px">
+          <a class="btn btn-teal" id="rota" target="_blank" rel="noopener"><svg><use href="#i-pin"/></svg>Traçar rota</a>
+          <a class="btn btn-ghost tel">Ligar</a>
+        </div>
+      </div>
+      <div class="map reveal"><iframe id="mapa" title="Mapa da Salim Pet" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head center reveal" style="text-align:center"><span class="eyebrow">Dúvidas frequentes</span><h2>Antes de agendar</h2></div>
+    <div class="faq" id="faq"></div>
+  </div>
+</section>
+
+<section style="padding:0 0 40px">
+  <div class="wrap">
+    <div class="final reveal">
+      <h2>Seu pet merece esse cuidado. Bora marcar?</h2>
+      <p>Resposta rápida pelo WhatsApp, de segunda a sábado.</p>
+      <div style="display:flex;flex-wrap:wrap;gap:12px;justify-content:center">
+        <a class="btn btn-ghost" href="#agendar" data-tab="spa">🛁 Banho e tosa</a>
+        <a class="btn btn-ghost" href="#agendar" data-tab="vet">🩺 Consulta veterinária</a>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap foot">
+    <div>© <span id="yr"></span> Salim Pet Clínica Veterinária e Banho e Tosa · <span data-k="contato.rua"></span>, <span data-k="contato.cidade"></span></div>
+    <a class="igLink" target="_blank" rel="noopener"><span class="igUser"></span></a>
+  </div>
+</footer>
+
+<a class="fab" href="#" data-wa="Olá! Vim pelo site da Salim Pet e gostaria de agendar um horário." aria-label="Falar no WhatsApp"><svg><use href="#i-wa"/></svg></a>
+
+<script>
+(async () => {
+  const res = await fetch('content/site.json', {cache: 'no-cache'});
+  const S = await res.json();
+  const get = path => path.split('.').reduce((o, k) => o == null ? o : o[k], S);
+  const img = p => String(p || '').replace(/^\/+/, '');          // painel salva "/img/x.jpg"; o site usa caminho relativo
+  const el = (tag, cls, txt) => { const e = document.createElement(tag); if (cls) e.className = cls; if (txt != null) e.textContent = txt; return e; };
+  const C = S.contato;
+  const WA = String(C.whatsapp).replace(/\D/g, '');
+  const waLink = t => `https://wa.me/${WA}?text=${encodeURIComponent(t)}`;
+
+  // textos simples e fotos
+  document.querySelectorAll('[data-k]').forEach(e => { e.textContent = get(e.dataset.k) ?? ''; });
+  document.querySelectorAll('[data-src]').forEach(e => { e.src = img(get(e.dataset.src)); });
+
+  // aviso
+  if (S.aviso && S.aviso.ativo && S.aviso.texto) { const a = document.getElementById('aviso'); a.textContent = S.aviso.texto; a.hidden = false; }
+
+  // SEO: título, descrição e dados para o Google, tudo vindo do conteúdo
+  if (S.seo) {
+    if (S.seo.titulo) document.title = S.seo.titulo;
+    if (S.seo.descricao) document.getElementById('metaDesc').content = S.seo.descricao;
+  }
+  {
+    const DAYS = {dom:'Sunday', seg:'Monday', ter:'Tuesday', qua:'Wednesday', qui:'Thursday', sex:'Friday', sab:'Saturday'};
+    const norm = s => String(s).normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase().slice(0, 3);
+    const hhmm = t => { const m = String(t).match(/(\d{1,2})(?:[h:](\d{2}))?/); return m ? `${m[1].padStart(2, '0')}:${m[2] || '00'}` : null; };
+    const open = (S.horarios || []).filter(h => !h.fechado && DAYS[norm(h.dia)]).map(h => {
+      const [a, b] = String(h.horario).split(/\s*(?:às|as|-|a)\s*/i);
+      return {'@type': 'OpeningHoursSpecification', dayOfWeek: DAYS[norm(h.dia)], opens: hhmm(a), closes: hhmm(b)};
+    }).filter(o => o.opens && o.closes);
+    const ld = {
+      '@context': 'https://schema.org', '@type': 'VeterinaryCare',
+      name: 'Salim Pet Clínica Veterinária e Banho e Tosa', image: new URL('img/perfil.jpg', location.href).href,
+      telephone: '+' + String(S.contato.whatsapp).replace(/\D/g, ''),
+      address: {'@type': 'PostalAddress', streetAddress: `${S.contato.rua} - ${S.contato.bairro}`, addressLocality: String(S.contato.cidade).split(' - ')[0], addressRegion: String(S.contato.cidade).split(' - ')[1] || 'SP', postalCode: S.contato.cep, addressCountry: 'BR'},
+      openingHoursSpecification: open,
+      aggregateRating: {'@type': 'AggregateRating', ratingValue: String(S.google.nota).replace(',', '.'), reviewCount: String(S.google.avaliacoes).replace(/\D/g, '')},
+      sameAs: [`https://www.instagram.com/${String(S.contato.instagram).replace(/^@/, '')}/`]
+    };
+    const sc = document.createElement('script'); sc.type = 'application/ld+json'; sc.textContent = JSON.stringify(ld); document.head.append(sc);
+  }
+
+  // contato
+  const tel = 'tel:+55' + String(C.telefone).replace(/\D/g, '');
+  document.querySelectorAll('.tel').forEach(a => a.href = tel);
+  const ig = String(C.instagram).replace(/^@/, '');
+  document.querySelectorAll('#igLink, .igLink').forEach(a => a.href = `https://www.instagram.com/${ig}/`);
+  document.querySelectorAll('#igUser, .igUser').forEach(s => s.textContent = '@' + ig);
+  const endereco = `${C.rua} - ${C.bairro}, ${C.cidade}, ${C.cep}`;
+  document.getElementById('rota').href = 'https://www.google.com/maps/dir/?api=1&destination=' + encodeURIComponent(endereco);
+  document.getElementById('mapa').src = 'https://www.google.com/maps?q=' + encodeURIComponent(endereco) + '&output=embed';
+  document.querySelectorAll('[data-wa]').forEach(a => { a.href = waLink(a.dataset.wa); a.target = '_blank'; a.rel = 'noopener'; });
+
+  // listas de serviços
+  const fillList = (id, items) => { const ul = document.getElementById(id); (items || []).forEach(t => ul.append(el('li', null, t))); };
+  fillList('listaClinica', S.clinica.servicos);
+  fillList('listaEstetica', S.estetica.servicos);
+
+  (S.veterinaria.destaques || []).forEach(d => {
+    const p = el('div', 'pillar'); p.append(el('b', null, d.titulo), el('span', null, d.texto));
+    document.getElementById('destaques').append(p);
+  });
+
+  (S.galeria || []).forEach(g => {
+    const f = el('figure', 'reveal'); const i = el('img'); i.src = img(g.foto); i.alt = g.nome || 'Pet atendido na Salim Pet'; i.loading = 'lazy';
+    f.append(i); if (g.nome) f.append(el('figcaption', null, g.nome));
+    document.getElementById('galeria').append(f);
+  });
+
+  (S.avaliacoes || []).forEach(r => {
+    const f = el('figure', 'quote reveal'); f.style.margin = 0;
+    f.append(el('p', null, `“${r.texto}”`), el('small', null, r.autor || 'Avaliação no Google'));
+    document.getElementById('reviews').append(f);
+  });
+
+  (S.perguntas || []).forEach(q => {
+    const d = el('details', 'reveal'); d.append(el('summary', null, q.pergunta), el('p', null, q.resposta));
+    document.getElementById('faq').append(d);
+  });
+
+  // horários (e dias fechados para o formulário)
+  const DAY = {dom:0, seg:1, ter:2, qua:3, qui:4, sex:5, sab:6};
+  const dayIdx = s => DAY[String(s).normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase().slice(0, 3)];
+  const fechados = new Set();
+  const today = new Date().getDay();
+  const hours = document.getElementById('hours');
+  (S.horarios || []).forEach(h => {
+    const idx = dayIdx(h.dia);
+    if (h.fechado && idx != null) fechados.add(idx);
+    const a = el('span', null, h.dia), b = el('span', h.fechado ? 'off' : null, h.fechado ? (h.horario || 'Fechado') : h.horario);
+    if (idx === today) { a.classList.add('today'); b.classList.add('today'); }
+    hours.append(a, b);
+  });
+
+  // formulário
+  const chips = (id, name, items) => {
+    const box = document.getElementById(id);
+    (items || []).forEach((t, n) => {
+      const l = el('label'); const i = el('input'); i.type = 'radio'; i.name = name; i.value = t; if (!n) i.checked = true;
+      l.append(i, el('span', null, t)); box.append(l);
+    });
+  };
+  chips('svcSpa', 'svc', S.estetica.opcoes_agendamento);
+  chips('svcVet', 'svcv', S.clinica.opcoes_agendamento);
+
+  let kind = 'spa';
+  const svcSpa = document.getElementById('svcSpa'), svcVet = document.getElementById('svcVet'), porteField = document.getElementById('porteField');
+  const setKind = k => {
+    kind = k;
+    document.querySelectorAll('.tabs button').forEach(b => b.setAttribute('aria-selected', b.dataset.kind === k));
+    svcSpa.hidden = k !== 'spa'; svcVet.hidden = k !== 'vet'; porteField.hidden = k !== 'spa';
+  };
+  document.querySelectorAll('.tabs button').forEach(b => b.addEventListener('click', () => setKind(b.dataset.kind)));
+  document.querySelectorAll('[data-tab]').forEach(a => a.addEventListener('click', () => setKind(a.dataset.tab)));
+
+  const dateEl = document.getElementById('data');
+  const iso = d => new Date(d.getTime() - d.getTimezoneOffset() * 60000).toISOString().slice(0, 10);
+  const now = new Date();
+  dateEl.min = iso(now);
+  const first = new Date(now); if (now.getHours() >= 17) first.setDate(first.getDate() + 1);
+  for (let n = 0; n < 7 && fechados.has(first.getDay()); n++) first.setDate(first.getDate() + 1);
+  dateEl.value = iso(first);
+
+  const hint = document.getElementById('hint');
+  document.getElementById('bookForm').addEventListener('submit', e => {
+    e.preventDefault();
+    const f = e.target;
+    const tutor = f.tutor.value.trim(), pet = f.pet.value.trim(), data = f.data.value;
+    hint.textContent = '';
+    if (!tutor || !pet) { hint.textContent = 'Preencha seu nome e o nome do pet.'; (tutor ? f.pet : f.tutor).focus(); return; }
+    if (!data) { hint.textContent = 'Escolha um dia.'; f.data.focus(); return; }
+    const d = new Date(data + 'T12:00:00');
+    if (fechados.has(d.getDay())) { hint.textContent = 'Nesse dia estamos fechados. Escolha outro dia.'; f.data.focus(); return; }
+    const svc = (kind === 'spa' ? f.querySelector('[name=svc]:checked') : f.querySelector('[name=svcv]:checked'))?.value || '';
+    const dia = d.toLocaleDateString('pt-BR', {weekday: 'long', day: '2-digit', month: '2-digit'});
+    const lines = [
+      `Olá! Vim pelo site e quero agendar ${kind === 'spa' ? 'banho e tosa' : 'atendimento veterinário'} 🐾`,
+      ``,
+      `*Serviço:* ${svc}`,
+      `*Tutor(a):* ${tutor}`,
+      `*Pet:* ${pet} (${f.especie.value}${kind === 'spa' ? ', porte ' + f.porte.value.toLowerCase() : ''})`,
+      `*Dia preferido:* ${dia}`,
+      `*Período:* ${f.periodo.value}`,
+    ];
+    if (f.obs.value.trim()) lines.push(`*Obs.:* ${f.obs.value.trim()}`);
+    window.open(waLink(lines.join('\n')), '_blank', 'noopener');
+  });
+
+  document.getElementById('yr').textContent = now.getFullYear();
+
+  // animações de entrada
+  const io = new IntersectionObserver(es => es.forEach(x => { if (x.isIntersecting) { x.target.classList.add('in'); io.unobserve(x.target); } }), {rootMargin: '0px 0px -8% 0px'});
+  document.querySelectorAll('.reveal').forEach(e => io.observe(e));
+})();
+
+const hdr = document.querySelector('header');
+addEventListener('scroll', () => hdr.classList.toggle('scrolled', scrollY > 8), {passive: true});
+</script>
+</body>
+</html>

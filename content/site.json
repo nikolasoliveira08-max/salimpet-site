@@ -1,0 +1,201 @@
+{
+  "seo": {
+    "titulo": "Salim Pet | Clínica Veterinária e Banho e Tosa no Jardim Maria Estela",
+    "descricao": "Clínica veterinária e estética animal no Jardim Maria Estela, São Paulo. Consultas com a Dra. Giovanna Salim, vacinas, exames, cirurgias, castração, banho e tosa. Agende pelo WhatsApp."
+  },
+  "aviso": {
+    "ativo": false,
+    "texto": "Sexta-feira (20/11) é feriado: estaremos fechados."
+  },
+  "contato": {
+    "whatsapp": "5511965114217",
+    "telefone": "(11) 96511-4217",
+    "instagram": "clinicavetsalimpet",
+    "rua": "R. Bernardino de Aguiar, 474",
+    "bairro": "Jardim Maria Estela",
+    "cidade": "São Paulo - SP",
+    "cep": "04181-060"
+  },
+  "google": {
+    "nota": "4,8",
+    "avaliacoes": "100"
+  },
+  "topo": {
+    "titulo": "Saúde e beleza pro seu pet,",
+    "titulo_destaque": "no mesmo lugar.",
+    "texto": "Consultas, vacinas, exames e cirurgias com a Dra. Giovanna Salim, e banho e tosa com todo carinho. No Jardim Maria Estela, Zona Sul de São Paulo.",
+    "foto_1": "img/bob.jpg",
+    "foto_2": "img/slash.jpg",
+    "selo_1": "🛁 Banho relaxante",
+    "selo_2": "🩺 Veterinária no local"
+  },
+  "horarios": [
+    {
+      "dia": "Segunda",
+      "horario": "9h às 18h",
+      "fechado": false
+    },
+    {
+      "dia": "Terça",
+      "horario": "9h às 18h",
+      "fechado": false
+    },
+    {
+      "dia": "Quarta",
+      "horario": "9h às 18h",
+      "fechado": false
+    },
+    {
+      "dia": "Quinta",
+      "horario": "9h às 18h",
+      "fechado": false
+    },
+    {
+      "dia": "Sexta",
+      "horario": "9h às 18h",
+      "fechado": false
+    },
+    {
+      "dia": "Sábado",
+      "horario": "9h às 18h",
+      "fechado": false
+    },
+    {
+      "dia": "Domingo e feriados",
+      "horario": "Fechado",
+      "fechado": true
+    }
+  ],
+  "horario_resumo": "Seg a sáb, 9h às 18h",
+  "clinica": {
+    "titulo": "Cuidado médico de verdade",
+    "texto": "Atendimento próximo, sem pressa, pra entender o que seu pet precisa.",
+    "servicos": [
+      "Consultas",
+      "Vacinas",
+      "Exames laboratoriais",
+      "Cirurgias em geral",
+      "Castração",
+      "Limpeza de tártaro",
+      "Atestado para viagem",
+      "Vermífugos e antipulgas"
+    ],
+    "opcoes_agendamento": [
+      "Consulta",
+      "Vacina",
+      "Exames",
+      "Castração / cirurgia",
+      "Limpeza de tártaro",
+      "Atestado para viagem"
+    ]
+  },
+  "estetica": {
+    "titulo": "Banho e tosa com carinho",
+    "texto": "Seu pet sai cheiroso, bonito e com foto no nosso cantinho iluminado.",
+    "servicos": [
+      "Banho",
+      "Tosa higiênica",
+      "Tosa na tesoura",
+      "Tosa na máquina",
+      "Banho relaxante",
+      "Laço ou gravatinha",
+      "Primeiro banho do filhote",
+      "Ensaios temáticos"
+    ],
+    "opcoes_agendamento": [
+      "Banho",
+      "Banho e tosa",
+      "Tosa higiênica",
+      "Banho relaxante"
+    ]
+  },
+  "veterinaria": {
+    "nome": "Dra. Giovanna Salim",
+    "texto": "Médica-veterinária à frente da Salim Pet. Aqui o atendimento é feito por quem conhece cada paciente pelo nome, da primeira vacina do filhote ao check-up do idoso.",
+    "foto": "img/clip2.jpg",
+    "destaques": [
+      {
+        "titulo": "Clínica + estética",
+        "texto": "Banho com veterinária por perto, se precisar."
+      },
+      {
+        "titulo": "Exames",
+        "texto": "Laboratoriais para diagnóstico mais rápido."
+      },
+      {
+        "titulo": "Cirurgias",
+        "texto": "Castrações e procedimentos em geral."
+      }
+    ]
+  },
+  "galeria": [
+    {
+      "foto": "img/simba.jpg",
+      "nome": "Simba"
+    },
+    {
+      "foto": "img/clip1.jpg",
+      "nome": "Pronto pra passear"
+    },
+    {
+      "foto": "img/amora.jpg",
+      "nome": "Amora"
+    },
+    {
+      "foto": "img/jack.jpg",
+      "nome": "Jack"
+    },
+    {
+      "foto": "img/toddynho.jpg",
+      "nome": "Toddynho"
+    },
+    {
+      "foto": "img/lucca.jpg",
+      "nome": "Lucca"
+    },
+    {
+      "foto": "img/raul.jpg",
+      "nome": "Raul"
+    },
+    {
+      "foto": "img/bob.jpg",
+      "nome": "Bob"
+    }
+  ],
+  "avaliacoes": [
+    {
+      "texto": "Resumindo esse é o melhor lugar para qualquer pet, toda equipe é nota 10 👏👏",
+      "autor": "Avaliação no Google"
+    },
+    {
+      "texto": "Graças a Deus e a Dra Giovanna deu tudo certo!",
+      "autor": "Avaliação no Google"
+    },
+    {
+      "texto": "No meu caso teria poupado tempo e dinheiro para o tratamento do meu pet!",
+      "autor": "Avaliação no Google"
+    }
+  ],
+  "perguntas": [
+    {
+      "pergunta": "Atendem gatos também?",
+      "resposta": "Sim. A clínica atende cães e gatos. Para banho de gatos, avise no agendamento para separarmos o melhor horário."
+    },
+    {
+      "pergunta": "Quanto custa o banho e tosa?",
+      "resposta": "O valor depende do porte, da pelagem e do tipo de tosa. Mande o nome e a raça do seu pet pelo WhatsApp que passamos o valor certinho."
+    },
+    {
+      "pergunta": "Preciso agendar ou posso ir direto?",
+      "resposta": "Recomendamos agendar. A agenda costuma lotar, principalmente aos sábados e em datas comemorativas."
+    },
+    {
+      "pergunta": "Fazem atestado para viagem?",
+      "resposta": "Sim. Emitimos atestado de saúde para viagem. Agende com antecedência e traga a carteirinha de vacinação."
+    },
+    {
+      "pergunta": "Abrem aos domingos?",
+      "resposta": "Não. Funcionamos de segunda a sábado, das 9h às 18h. Domingos e feriados fechado."
+    }
+  ]
+}

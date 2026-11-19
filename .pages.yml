@@ -1,0 +1,245 @@
+media:
+  input: img
+  output: /img
+  rename: safe
+  extensions: [jpg, jpeg, png, webp]
+
+content:
+  - name: site
+    label: Informações do site
+    type: file
+    path: content/site.json
+    format: json
+    fields:
+      - name: aviso
+        label: Aviso no topo do site
+        type: object
+        description: Faixa laranja no topo do site. Use para feriados, promoções ou recados.
+        fields:
+          - name: ativo
+            label: Mostrar aviso
+            type: boolean
+          - name: texto
+            label: Texto do aviso
+            type: string
+
+      - name: contato
+        label: Contato e endereço
+        type: object
+        fields:
+          - name: whatsapp
+            label: WhatsApp (só números, com 55 e DDD)
+            type: string
+            description: "Exemplo: 5511965114217. Todos os botões de agendamento vão para este número."
+            required: true
+            pattern:
+              regex: "^55\\d{10,11}$"
+              message: "Use só números, começando com 55 e o DDD. Ex.: 5511965114217"
+          - name: telefone
+            label: Telefone como aparece no site
+            type: string
+            description: "Exemplo: (11) 96511-4217"
+          - name: instagram
+            label: Instagram (sem @)
+            type: string
+          - name: rua
+            label: Rua e número
+            type: string
+          - name: bairro
+            label: Bairro
+            type: string
+          - name: cidade
+            label: Cidade - UF
+            type: string
+          - name: cep
+            label: CEP
+            type: string
+
+      - name: google
+        label: Nota no Google
+        type: object
+        description: Atualize de vez em quando com os números do seu perfil no Google.
+        fields:
+          - name: nota
+            label: Nota (ex.: 4,8)
+            type: string
+          - name: avaliacoes
+            label: Quantidade de avaliações
+            type: string
+
+      - name: horario_resumo
+        label: Horário resumido (aparece no topo)
+        type: string
+        description: "Exemplo: Seg a sáb, 9h às 18h"
+
+      - name: horarios
+        label: Horário de funcionamento
+        type: object
+        description: Marque "Fechado" nos dias sem atendimento. O formulário não deixa agendar nesses dias.
+        list:
+          collapsible:
+            collapsed: true
+            summary: "{dia}: {horario}"
+        fields:
+          - name: dia
+            label: Dia
+            type: string
+          - name: horario
+            label: Horário
+            type: string
+          - name: fechado
+            label: Fechado
+            type: boolean
+
+      - name: topo
+        label: Topo do site (primeira tela)
+        type: object
+        fields:
+          - name: titulo
+            label: Título
+            type: string
+          - name: titulo_destaque
+            label: Final do título (em verde)
+            type: string
+          - name: texto
+            label: Texto abaixo do título
+            type: text
+          - name: foto_1
+            label: Foto grande
+            type: image
+          - name: foto_2
+            label: Foto pequena
+            type: image
+          - name: selo_1
+            label: Selo sobre as fotos 1
+            type: string
+          - name: selo_2
+            label: Selo sobre as fotos 2
+            type: string
+
+      - name: clinica
+        label: Serviços veterinários
+        type: object
+        fields:
+          - name: titulo
+            label: Título
+            type: string
+          - name: texto
+            label: Texto
+            type: text
+          - name: servicos
+            label: Lista de serviços
+            type: string
+            list: true
+          - name: opcoes_agendamento
+            label: Opções no formulário de agendamento
+            type: string
+            list: true
+
+      - name: estetica
+        label: Banho e tosa
+        type: object
+        fields:
+          - name: titulo
+            label: Título
+            type: string
+          - name: texto
+            label: Texto
+            type: text
+          - name: servicos
+            label: Lista de serviços
+            type: string
+            list: true
+          - name: opcoes_agendamento
+            label: Opções no formulário de agendamento
+            type: string
+            list: true
+
+      - name: veterinaria
+        label: A veterinária
+        type: object
+        fields:
+          - name: nome
+            label: Nome
+            type: string
+          - name: texto
+            label: Apresentação
+            type: text
+          - name: foto
+            label: Foto
+            type: image
+          - name: destaques
+            label: Destaques (caixinhas)
+            type: object
+            list:
+              max: 3
+            fields:
+              - name: titulo
+                label: Título
+                type: string
+              - name: texto
+                label: Texto
+                type: string
+
+      - name: galeria
+        label: Galeria de pets
+        type: object
+        description: O ideal são 8 fotos em pé (formato retrato).
+        list:
+          collapsible:
+            collapsed: true
+            summary: "{nome}"
+        fields:
+          - name: foto
+            label: Foto
+            type: image
+          - name: nome
+            label: Nome do pet
+            type: string
+
+      - name: avaliacoes
+        label: Avaliações de clientes
+        type: object
+        list:
+          collapsible:
+            collapsed: true
+            summary: "{texto}"
+        fields:
+          - name: texto
+            label: Comentário
+            type: text
+          - name: autor
+            label: Assinatura
+            type: string
+            description: "Ex.: Avaliação no Google, ou o primeiro nome do cliente"
+
+      - name: perguntas
+        label: Perguntas frequentes
+        type: object
+        list:
+          collapsible:
+            collapsed: true
+            summary: "{pergunta}"
+        fields:
+          - name: pergunta
+            label: Pergunta
+            type: string
+          - name: resposta
+            label: Resposta
+            type: text
+
+      - name: seo
+        label: Google (título e descrição da página)
+        type: object
+        description: Texto que aparece no resultado de busca do Google. Mude só se souber o que está fazendo.
+        fields:
+          - name: titulo
+            label: Título da página
+            type: string
+            options:
+              maxlength: 70
+          - name: descricao
+            label: Descrição
+            type: text
+            options:
+              maxlength: 170
