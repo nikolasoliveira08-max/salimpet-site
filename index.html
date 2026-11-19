@@ -172,6 +172,7 @@ form{background:#fff;color:var(--ink);border-radius:24px;padding:28px}
 .chips input:focus-visible + span{outline:3px solid var(--amber)}
 .hint{font-size:13px;color:#b0402c;min-height:18px;font-weight:700}
 form .btn{width:100%;margin-top:6px;font-size:17px;padding:18px}
+.form-intro{background:var(--amber-50);border-radius:14px;padding:12px 14px;margin:0 0 18px;font-size:14.5px;line-height:1.45}
 .form-note{font-size:13px;color:var(--ink-2);text-align:center;margin:12px 0 0}
 [hidden]{display:none!important}
 @media (max-width:900px){.book{grid-template-columns:1fr;padding:32px 20px;border-radius:26px;gap:28px}form{padding:22px 18px}}
@@ -345,12 +346,12 @@ footer{padding:48px 0 110px;color:var(--ink-2);font-size:14.5px}
   <div class="wrap">
     <div class="sec-head reveal">
       <span class="eyebrow">Simples assim</span>
-      <h2>Agendar leva 1 minuto</h2>
+      <h2>Como agendar</h2>
     </div>
     <div class="steps">
       <div class="step reveal"><h3>Escolha o serviço</h3><p>Banho e tosa ou atendimento veterinário, e o melhor dia pra você.</p></div>
-      <div class="step reveal"><h3>Envie pelo WhatsApp</h3><p>O formulário monta a mensagem pronta. É só tocar em enviar.</p></div>
-      <div class="step reveal"><h3>Confirmamos o horário</h3><p>A equipe responde com o horário disponível e pronto, é só vir.</p></div>
+      <div class="step reveal"><h3>Envie o pedido</h3><p>O formulário monta a mensagem no WhatsApp. É só tocar em enviar.</p></div>
+      <div class="step reveal"><h3>Confirmamos o horário</h3><p>Nossa equipe responde com os horários livres. Você escolhe um e o agendamento está feito.</p></div>
     </div>
   </div>
 </section>
@@ -360,10 +361,10 @@ footer{padding:48px 0 110px;color:var(--ink-2);font-size:14.5px}
     <div class="book reveal">
       <div class="book-side">
         <span class="eyebrow">Agendamento</span>
-        <h2>Reserve o horário do seu pet</h2>
-        <p>As vagas costumam esgotar, principalmente aos sábados. Garanta a sua agora.</p>
+        <h2>Peça um horário para o seu pet</h2>
+        <p>Conte o que seu pet precisa e o dia que fica melhor pra você. Nossa equipe responde no WhatsApp com os horários disponíveis.</p>
         <ul>
-          <li><svg><use href="#i-check"/></svg>Resposta rápida no WhatsApp</li>
+          <li><svg><use href="#i-check"/></svg>Você recebe os horários livres no WhatsApp</li>
           <li><svg><use href="#i-check"/></svg><span data-k="horario_resumo"></span></li>
           <li><svg><use href="#i-check"/></svg>Cães e gatos</li>
           <li><svg><use href="#i-check"/></svg>Nota <span data-k="google.nota"></span> com <span data-k="google.avaliacoes"></span> avaliações</li>
@@ -371,6 +372,7 @@ footer{padding:48px 0 110px;color:var(--ink-2);font-size:14.5px}
       </div>
 
       <form id="bookForm" novalidate>
+        <p class="form-intro"><b>Este é um pedido de horário.</b> Ele só fica confirmado depois que nossa equipe responder no WhatsApp.</p>
         <div class="tabs" role="tablist" aria-label="Tipo de atendimento">
           <button type="button" role="tab" id="tab-spa" aria-selected="true" data-kind="spa">🛁 Banho e tosa</button>
           <button type="button" role="tab" id="tab-vet" aria-selected="false" data-kind="vet">🩺 Veterinário</button>
@@ -399,7 +401,7 @@ footer{padding:48px 0 110px;color:var(--ink-2);font-size:14.5px}
         </div>
 
         <div class="row">
-          <div class="field"><label for="data">Dia preferido</label><input type="date" id="data" name="data" required></div>
+          <div class="field"><label for="data">Dia de preferência</label><input type="date" id="data" name="data" required></div>
           <div class="field">
             <label for="periodo">Período</label>
             <select id="periodo" name="periodo"><option>Manhã</option><option>Tarde</option><option>Tanto faz</option></select>
@@ -412,8 +414,8 @@ footer{padding:48px 0 110px;color:var(--ink-2);font-size:14.5px}
         </div>
 
         <div class="hint" id="hint" role="alert"></div>
-        <button class="btn btn-wa" type="submit"><svg><use href="#i-wa"/></svg>Enviar pelo WhatsApp</button>
-        <p class="form-note">Abre o WhatsApp com a mensagem pronta para <span data-k="contato.telefone"></span>.</p>
+        <button class="btn btn-wa" type="submit"><svg><use href="#i-wa"/></svg>Consultar disponibilidade</button>
+        <p class="form-note">Abre o WhatsApp com seu pedido pronto para <span data-k="contato.telefone"></span>. É só enviar e aguardar nossa resposta.</p>
       </form>
     </div>
   </div>
@@ -625,12 +627,12 @@ footer{padding:48px 0 110px;color:var(--ink-2);font-size:14.5px}
     const svc = (kind === 'spa' ? f.querySelector('[name=svc]:checked') : f.querySelector('[name=svcv]:checked'))?.value || '';
     const dia = d.toLocaleDateString('pt-BR', {weekday: 'long', day: '2-digit', month: '2-digit'});
     const lines = [
-      `Olá! Vim pelo site e quero agendar ${kind === 'spa' ? 'banho e tosa' : 'atendimento veterinário'} 🐾`,
+      `Olá! Vim pelo site e gostaria de saber a disponibilidade para ${kind === 'spa' ? 'banho e tosa' : 'atendimento veterinário'} 🐾`,
       ``,
       `*Serviço:* ${svc}`,
       `*Tutor(a):* ${tutor}`,
       `*Pet:* ${pet} (${f.especie.value}${kind === 'spa' ? ', porte ' + f.porte.value.toLowerCase() : ''})`,
-      `*Dia preferido:* ${dia}`,
+      `*Dia de preferência:* ${dia}`,
       `*Período:* ${f.periodo.value}`,
     ];
     if (f.obs.value.trim()) lines.push(`*Obs.:* ${f.obs.value.trim()}`);
