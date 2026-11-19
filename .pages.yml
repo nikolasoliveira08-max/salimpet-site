@@ -61,7 +61,7 @@ content:
         description: Atualize de vez em quando com os números do seu perfil no Google.
         fields:
           - name: nota
-            label: Nota (ex.: 4,8)
+            label: "Nota (ex.: 4,8)"
             type: string
           - name: avaliacoes
             label: Quantidade de avaliações
