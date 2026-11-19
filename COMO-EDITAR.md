@@ -23,7 +23,7 @@ Você edita o site por um painel online, sem mexer em código. Tudo o que você 
 | Serviços veterinários / Banho e tosa | Listas de serviços e as opções do formulário |
 | A veterinária | Nome, apresentação e foto |
 | Galeria de pets | Fotos e nomes dos pets |
-| Avaliações de clientes | Comentários exibidos |
+| Avaliações de clientes | Bloqueado: só o responsável pelo site altera |
 | Perguntas frequentes | Perguntas e respostas |
 
 3. Clique em **Save** (Salvar) no canto superior direito.
