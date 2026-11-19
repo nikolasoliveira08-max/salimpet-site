@@ -200,6 +200,8 @@ content:
       - name: avaliacoes
         label: Avaliações de clientes
         type: object
+        readonly: true
+        description: Bloqueado. São comentários reais do Google e só podem ser trocados pelo responsável do site.
         list:
           collapsible:
             collapsed: true
